@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app="listApp">
+  <head>
+    <title>Lista della spesa</title>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+  </head>
+  <body>
+      <div ng-controller="ListCtrl">
+        <ul>
+            <li ng-repeat="elemento in lista">
+               <input type="checkbox" ng-model="elemento.comprato" />
+               <span ng-if="!elemento.comprato">{{ elemento.nome }}</span>
+               <span ng-if="elemento.comprato" style="text-decoration:line-through;">{{ elemento.nome }}</span>
+            </li>
+         </ul>
+         <input type='text' id='input_nome'/><button ng-click="aggiungi()">Aggiungi</button>
+
+       </div>
+       <script type="text/javascript" src='js/main.js'></script>
+  </body>
+</html>
