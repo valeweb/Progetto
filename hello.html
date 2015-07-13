@@ -1,12 +1,10 @@
 <!doctype html>
-<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app>
+<html class="ng-app" id="ng-app" ng-app xmlns:ng="http://angularjs.org">
    <head>
       <title>Hello {{nome}}</title>
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
    </head>
-   <body>
-         <label>Nome:</label>
-         <input type="text" ng-model="nome" value="Angular" placeholder="Inserisci il tuo nome">
-         <h1>Hello, {{nome}}!</h1>
+   <body ng-init="nomi = ['Angular','Mondo','Antonio','Matteo','Valentina']">
+       <p ng-repeat="nome in nomi">Ciao {{ nome }}</p>
    </body>
 </html>
